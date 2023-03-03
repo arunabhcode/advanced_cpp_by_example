@@ -76,7 +76,8 @@ MARKDOWN = {
             'use_pygments': True,
             'linenums': True,
         },
-    }
+    },
+    'output_format': 'html5'
 }
 
 # Blogroll
