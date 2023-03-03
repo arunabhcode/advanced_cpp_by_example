@@ -46,6 +46,7 @@ PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['readtime', 'search', 'neighbors', 'pelican-toc']
 
 DISPLAY_PAGES_ON_MENU = True
+ARTICLE_ORDER_BY = 'date'
 
 # Site search plugin
 SEARCH_MODE = "output"
