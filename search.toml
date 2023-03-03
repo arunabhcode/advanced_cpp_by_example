@@ -1,0 +1,13 @@
+[input]
+base_directory = "output"
+html_selector = "main"
+
+[[input.files]]
+path = "introduction-to-smart-pointers.html"
+url = "/introduction-to-smart-pointers.html"
+title = "Introduction to smart pointers"
+
+[[input.files]]
+path = "variadic-templates.html"
+url = "/variadic-templates.html"
+title = "Variadic Templates"
