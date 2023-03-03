@@ -25,7 +25,7 @@ print(JINJA_GLOBALS['subfolders'])
 
 AUTHOR = 'Arunabh Sharma'
 SITENAME = 'Advanced C++'
-SITEURL = 'https://arunabhcode.github.io/advanced_cpp_by_example/'
+SITEURL = ''
 
 PATH = 'content'
 
