@@ -16,7 +16,6 @@ In order these problems, there exist 3 classes of smart pointers:
 
 (iii) `weak_ptr` -  This pointer takes a non-owning view on the object following the shared ownership pattern. IT can view the data but doesn't augment the count of the number of owners.
 
-### Code
 
 	#include <iostream>
 	#include <memory>
@@ -36,3 +35,7 @@ In order these problems, there exist 3 classes of smart pointers:
 		
 		return 0;
 	}
+
+### Goal
+
+By the end of these series, you should understand and be able to implement smart pointer classes.
