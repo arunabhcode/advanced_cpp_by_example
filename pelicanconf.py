@@ -90,9 +90,11 @@ LINKS = (
 
 # Social widget
 SOCIAL = (
-    ('You can add links in your config file', '#'),
-    ('Another social link', '#'),
+    ('github', 'http://github.com/arunabhcode'),
+    ('linkedin', 'https://www.linkedin.com/in/arunabh-sharma-21316053/'),
 )
+
+SUBTITLE = 'About Me'
 
 DEFAULT_PAGINATION = False
 DISPLAY_PAGES_ON_MENU = False
