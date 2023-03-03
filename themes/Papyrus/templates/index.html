@@ -41,10 +41,10 @@
   <br><br>
   <div style="font-size: 3em; text-decoration: underline;text-align: center;"><b>{{ subdir | upper }}</b></div>
   <br><br>
-  {% for a_name in articles %}
+  {% for article in articles_page.object_list %}
     <div class="py-1">
       <ul>
-        {% for article in articles_page.object_list %}
+        {% for a_name in articles %}
           {% if subdir ~ '/' ~ a_name == article.relative_source_path %}
             <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
               <li class="transition ease-in active:-translate-y-1 active:scale-110 duration-75">
