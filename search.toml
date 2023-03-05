@@ -1,11 +1,16 @@
 [input]
-base_directory = "output"
+base_directory = "/home/asharma/advanced_cpp_by_example/output"
 html_selector = "main"
 
 [[input.files]]
 path = "introduction-to-smart-pointers.html"
 url = "/introduction-to-smart-pointers.html"
 title = "Introduction to smart pointers"
+
+[[input.files]]
+path = "templates.html"
+url = "/templates.html"
+title = "Templates"
 
 [[input.files]]
 path = "variadic-templates.html"
