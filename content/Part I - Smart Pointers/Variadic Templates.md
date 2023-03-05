@@ -1,30 +1,11 @@
 Title: Variadic Templates
-Date: 2023-03-02
+Date: 2023-03-04
 
 ### Intuition
 
 If you want to write code that can generalize not just across the type but also the number of arguments, you can use variadic templates which serves as a generalization of regular templates
 
 ### Explanation
-
-#### Templates
-
-Regular templates can be used to re-use a particular piece of code or a class for different types
-
-	#include <iostream>
-
-	template<typename T>
-	void print(const T &value)
-	{
-		std::cout << value << std::endl;
-	}
-
-	int main()
-	{
-		print(42);
-		print("Answers are needed");
-		return 0;
-	}
 
 #### Variadic Templates
 
