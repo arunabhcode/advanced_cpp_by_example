@@ -61,7 +61,7 @@
       <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
         <time>March 13, 2023</time>
         <div>
-          <span>&nbsp;·&nbsp;11 min read</span>
+          <span>&nbsp;·&nbsp;12 min read</span>
         </div>
         <div>
           <span>&nbsp;·&nbsp;Arunabh Sharma</span>
@@ -206,21 +206,25 @@
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Practical example of how std::move uses this to turn <code>T</code> into <code>T&amp;&amp;</code>:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">namespace</span><span class="w"> </span><span class="nt">std</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;type_traits&gt;</span><span class="cp"></span>
+
+<span class="n">namespace</span><span class="w"> </span><span class="nn">std</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="err">template</span><span class="w"> </span><span class="err">&lt;typename</span><span class="w"> </span><span class="err">T&gt;</span><span class="w"></span>
-<span class="w">    </span><span class="err">typename</span><span class="w"> </span><span class="n">std</span><span class="p">:</span><span class="o">:</span><span class="n">remove_reference</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nf">move</span><span class="p">(</span><span class="n">T</span><span class="err">&amp;&amp;</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="n">noexcept</span><span class="w"></span>
-<span class="w">    </span><span class="err">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">return</span><span class="w"> </span><span class="n">static_cast</span><span class="o">&lt;</span><span class="n">typename</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">remove_reference</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">&amp;&amp;&gt;</span><span class="p">(</span><span class="n">val</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="n">typename</span><span class="w"> </span><span class="nc">remove_reference</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nf">move</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="n">noexcept</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kr">static_cast</span><span class="o">&lt;</span><span class="n">typename</span><span class="w"> </span><span class="nc">remove_reference</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">&amp;&amp;&gt;</span><span class="p">(</span><span class="n">val</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w">   </span>
-<span class="err">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4>Conditional Compilation</h4>
 <p>The members above can then be used to wield more fine control over what parts of the code to execute based on the typename itself almost like a compile time if-else.

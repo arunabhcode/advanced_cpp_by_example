@@ -1,5 +1,5 @@
 [input]
-base_directory = "output"
+base_directory = "/home/asharma/advanced_cpp_by_example/output"
 html_selector = "main"
 
 [[input.files]]
