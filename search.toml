@@ -16,3 +16,8 @@ title = "Templates"
 path = "variadic-templates.html"
 url = "/variadic-templates.html"
 title = "Variadic Templates"
+
+[[input.files]]
+path = "type-traits.html"
+url = "/type-traits.html"
+title = "Type traits"
