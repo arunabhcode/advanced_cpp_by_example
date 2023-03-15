@@ -83,12 +83,14 @@ Let's implement our own trait called `is_printable` for the previous log class:
 
 Practical example of how std::move uses this to turn `T` into `T&&`:
 
+	#include <type_traits>
+
 	namespace std
 	{
 		template <typename T>
-		typename std::remove_reference<T>::type&& move(T&& val) noexcept
+		typename remove_reference<T>::type&& move(T&& val) noexcept
 		{
-		    return static_cast<typename std::remove_reference<T>::type&&>(val);
+		    return static_cast<typename remove_reference<T>::type&&>(val);
 		}	
 	}
 
